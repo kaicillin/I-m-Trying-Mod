@@ -1,0 +1,35 @@
+{
+  "schemaVersion": 1,
+  "id": "trying",
+  "version": "${version}",
+  "name": "Trying...",
+  "description": "",
+  "authors": [],
+  "contact": {},
+  "license": "MIT",
+  "icon": "assets/trying/icon.png",
+  "environment": "*",
+  "entrypoints": {
+    "fabric-datagen": [
+      "noidea.trying.client.TryingDataGenerator"
+    ],
+    "client": [
+      "noidea.trying.client.TryingClient"
+    ],
+    "main": [
+      "noidea.trying.Trying"
+    ]
+  },
+  "mixins": [
+    "trying.mixins.json",
+    {
+      "config": "trying.client.mixins.json",
+      "environment": "client"
+    }
+  ],
+  "depends": {
+    "fabricloader": ">=${loader_version}",
+    "fabric": "*",
+    "minecraft": "${minecraft_version}"
+  }
+}
